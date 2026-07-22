@@ -1,0 +1,14 @@
+clc;
+clear;
+r = input('Enter the value of r = ');
+phi = input('Enter the value of phi (degrees) = ');
+theta = input('Enter the value of theta (degrees) = ');
+x = r*sind(theta)*cosd(phi);
+y = r*sind(theta)*sind(phi);
+z = r*cosd(theta);
+disp('Spherical to Cartesian Coordinates P(x,y,z) = ');
+disp([x y z]);
+rho = r*sind(theta);
+z = r*cosd(theta);
+disp('Spherical to Cylindrical Coordinates S(rho,phi,z) = ');
+disp([rho phi z]);
