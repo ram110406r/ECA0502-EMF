@@ -1,0 +1,24 @@
+clc;
+clear;
+q=input('Enter the value of q=');
+r=input('Enter the value of r=');
+efcilon=8.854*10^-12;
+pi=3.14
+E=q/4*pi*efcilon*r^2;
+disp("The electric field is", [E]);
+D=E*efcilon;
+disp("The flux density is", [D]);
+x = linspace(0, 10, 50);
+y = E * exp(-0.1 * x);
+z = D * exp(-0.1 * x);
+figure();
+subplot(2, 2, 1);
+plot2d3(x,y);
+xlabel("R");
+ylabel("Electric field intensity");
+title('Electric field intensity');
+subplot(2, 2, 2);
+plot2d3(x,z);
+xlabel("A");
+ylabel("Electric flux intensity");
+title('Electric flux intensity');
